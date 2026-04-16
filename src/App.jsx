@@ -692,27 +692,27 @@ export default function App() {
                   </button>
                 </div>
 
-                <div className="bg-zinc-900 border border-zinc-800 rounded-2xl p-6 mb-8 shadow-inner">
-                  <label className="block text-sm font-medium text-zinc-400 mb-4">Amount Consumed</label>
-                  <div className="flex gap-4">
-                    <input 
-                      type="number"
-                      autoFocus
-                      className="flex-1 bg-zinc-950 border border-zinc-700 rounded-xl py-4 px-4 text-2xl font-bold text-white focus:outline-none focus:border-blue-500"
-                      value={servingAmount}
-                      onChange={(e) => setServingAmount(e.target.value)}
-                      placeholder="0"
-                    />
-                    <select 
-                      className="w-32 bg-zinc-950 border border-zinc-700 rounded-xl py-4 px-4 text-xl font-bold text-white focus:outline-none focus:border-blue-500 appearance-none text-center"
-                      value={servingUnit}
-                      onChange={(e) => setServingUnit(e.target.value)}
-                    >
-                      <option value="g">grams</option>
-                      <option value="oz">oz</option>
-                    </select>
-                  </div>
-                </div>
+                <div className="bg-zinc-900 border border-zinc-800 rounded-2xl p-4 sm:p-6 mb-8 shadow-inner">
+  <label className="block text-sm font-medium text-zinc-400 mb-3 sm:mb-4">Amount Consumed</label>
+  <div className="flex gap-3 sm:gap-4">
+    <input 
+      type="number"
+      autoFocus
+      className="flex-1 min-w-0 w-full bg-zinc-950 border border-zinc-700 rounded-xl py-3 px-3 sm:py-4 sm:px-4 text-xl sm:text-2xl font-bold text-white focus:outline-none focus:border-blue-500"
+      value={servingAmount}
+      onChange={(e) => setServingAmount(e.target.value)}
+      placeholder="0"
+    />
+    <select 
+      className="w-24 sm:w-32 shrink-0 bg-zinc-950 border border-zinc-700 rounded-xl py-3 px-2 sm:py-4 sm:px-4 text-lg sm:text-xl font-bold text-white focus:outline-none focus:border-blue-500 appearance-none text-center"
+      value={servingUnit}
+      onChange={(e) => setServingUnit(e.target.value)}
+    >
+      <option value="g">grams</option>
+      <option value="oz">oz</option>
+    </select>
+  </div>
+</div>
 
                 <div className="mt-auto pt-4 space-y-4">
                   <button 
