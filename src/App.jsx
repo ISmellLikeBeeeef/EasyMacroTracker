@@ -331,7 +331,7 @@ export default function App() {
         {view === 'daily' ? (
           <div className="max-w-4xl mx-auto space-y-6">
             
-            {/* Macros Summary */}
+       {/* Macros Summary */}
             <section className="grid grid-cols-2 md:grid-cols-4 gap-4">
               <div className="bg-zinc-900 p-4 rounded-2xl border border-zinc-800 flex flex-col items-center justify-center relative overflow-hidden">
                 <div className="absolute top-0 right-0 p-2 opacity-10 text-orange-500"><Flame size={48}/></div>
@@ -352,14 +352,12 @@ export default function App() {
                 <span className="text-xs text-zinc-500 mt-1 z-10">grams</span>
               </div>
               <div className="bg-zinc-900 p-4 rounded-2xl border border-zinc-800 flex flex-col items-center justify-center relative overflow-hidden">
-            </div>
-            <div className="bg-zinc-900 p-4 rounded-2xl border border-zinc-800 flex flex-col items-center justify-center relative overflow-hidden">
-              <div className="absolute top-0 right-0 p-2 opacity-10 text-yellow-500"><Droplets size={48}/></div>
-              <span className="text-zinc-400 text-sm font-medium mb-1 z-10">Fat</span>
-              <span className="text-3xl font-black text-yellow-400 z-10">{dailyTotals.fat.toFixed(1)}</span>
-              <span className="text-xs text-zinc-500 mt-1 z-10">grams</span>
-            </div>
-          </section>
+                <div className="absolute top-0 right-0 p-2 opacity-10 text-yellow-500"><Droplets size={48}/></div>
+                <span className="text-zinc-400 text-sm font-medium mb-1 z-10">Fat</span>
+                <span className="text-3xl font-black text-yellow-400 z-10">{dailyTotals.fat.toFixed(1)}</span>
+                <span className="text-xs text-zinc-500 mt-1 z-10">grams</span>
+              </div>
+            </section>
 
           {/* Micros Summary */}
           <section className="bg-zinc-900 p-4 rounded-2xl border border-zinc-800 flex flex-wrap gap-6 justify-around text-sm">
