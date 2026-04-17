@@ -21,7 +21,7 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
 const db = getFirestore(app);
-const appId = "my-macro-tracker";
+const appId = "macro-tracker";
 
 // --- PWA Setup Logic ---
 const setupPWA = () => {
