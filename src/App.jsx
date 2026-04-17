@@ -116,6 +116,29 @@ export default function App() {
   // Favorites State
   const [favorites, setFavorites] = useState([]);
 
+  // --- Fetch Data from Firebase on Load ---
+  useEffect(() => {
+    if (!user || !db) return;
+
+    const fetchDailyLogs = async () => {
+      try {
+        const docRef = doc(db, "artifacts", "my-macro-tracker", "users", user.uid, "logs", currentDate);
+        const docSnap = await getDoc(docRef);
+
+        if (docSnap.exists()) {
+          const data = docSnap.data();
+          setLogs(prev => ({ ...prev, [currentDate]: data.foods || [] }));
+        } else {
+          setLogs(prev => ({ ...prev, [currentDate]: [] }));
+        }
+      } catch (error) {
+        console.error("Error fetching daily logs:", error);
+      }
+    };
+
+    fetchDailyLogs();
+  }, [user, db, currentDate]);
+
   // --- Firebase Auth & Data Sync ---
   useEffect(() => {
     if (!auth) return;
